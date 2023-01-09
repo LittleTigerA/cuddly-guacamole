@@ -32,9 +32,10 @@ namespace Culldy
                 using (Process p = new Process())
                 {
                     p.StartInfo.FileName = "cmd.exe";
-                    p.StartInfo.UseShellExecute = true;
+                    p.StartInfo.UseShellExecute = false;
                     p.StartInfo.CreateNoWindow = true;
                     p.StartInfo.RedirectStandardError = true;
+                    p.StartInfo.RedirectStandardInput = true;
 
                     p.Start();
 
